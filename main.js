@@ -54,7 +54,11 @@ function getRandomNumber(amount){
     RightNumber = Math.floor(Math.random() * amount);
 }
 
-getTriviaSkill()
+function ShowHide(){
+    document.getElementById("StartUp").style.display = "none";
+    document.getElementById("gameWindow").style.display = "flex";
+}
+
 async function getTriviaSkill(){
     randomNumberArray = [];
     amount = 4;
