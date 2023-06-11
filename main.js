@@ -65,6 +65,7 @@ async function getTriviaSkill(){
 
 let correctResults = 0;
 let falseResults = 0;
+let missedResults = 0;
 
 function Answer(guess){
     if(isAllowed){
@@ -154,6 +155,7 @@ async function startTimer(){
                 break; 
             }
             if(o < 1){
+                document.getElementById("correctResults").innerText = missedResults;
                 isAllowed = false;
                 console.log("end")
                 isTimerAllowed = false;
