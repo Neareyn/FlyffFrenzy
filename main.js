@@ -20,24 +20,29 @@ function generateNumbers(amount){
             document.getElementById("SkillName" + i).innerText = "A: " + skillData[variableValue].name.en
             if(i === RightNumber){
                 document.getElementById("SkillIcon").style.backgroundImage = "url(/FlyffFrenzy/img/colored/" + skillData[variableValue].icon + ")"
+                document.getElementById("ID").innerText = "ID: " + variableValue
+
             }
         }
         if(i === 1){
             document.getElementById("SkillName" + i).innerText = "B: " + skillData[variableValue].name.en
             if(i === RightNumber){
                 document.getElementById("SkillIcon").style.backgroundImage = "url(/FlyffFrenzy/img/colored/" + skillData[variableValue].icon + ")"
+                document.getElementById("ID").innerText = "ID: " + variableValue
             }
         }
         if(i === 2){
             document.getElementById("SkillName" + i).innerText = "C: " + skillData[variableValue].name.en
             if(i === RightNumber){
                 document.getElementById("SkillIcon").style.backgroundImage = "url(/FlyffFrenzy/img/colored/" + skillData[variableValue].icon + ")"
+                document.getElementById("ID").innerText = "ID: " + variableValue
             }
         }
         if(i === 3){
             document.getElementById("SkillName" + i).innerText = "D: " + skillData[variableValue].name.en
             if(i === RightNumber){
                 document.getElementById("SkillIcon").style.backgroundImage = "url(/FlyffFrenzy/img/colored/" + skillData[variableValue].icon + ")"
+                document.getElementById("ID").innerText = "ID: " + variableValue
             }
         }
         console.log(variableName + ": " + variableValue);
@@ -132,8 +137,7 @@ async function startTimer(){
         document.getElementById("Timer").style.backgroundColor = "rgb(" + i + ", " + 255 + ", 0)"
         timerAmount--
         document.getElementById("Timer").style.width = 100/510*timerAmount + "%";
-        console.log(1)
-        console.log(isTimerAllowed)
+
         if(!isTimerAllowed){
             break; 
         }
@@ -149,8 +153,7 @@ async function startTimer(){
             document.getElementById("Timer").style.backgroundColor = "rgb(" + 255 + ", " + o + ", 0)"
             timerAmount--
             document.getElementById("Timer").style.width = 100/510*timerAmount + "%";
-            console.log(2)
-            console.log(isTimerAllowed)
+
             if(!isTimerAllowed){
                 break; 
             }
