@@ -19,25 +19,25 @@ function generateNumbers(amount){
         if(i === 0){
             document.getElementById("SkillName" + i).innerText = "A: " + skillData[variableValue].name.en
             if(i === RightNumber){
-                document.getElementById("SkillIcon").style.backgroundImage = "url(img/colored/" + skillData[variableValue].icon + ")"
+                document.getElementById("SkillIcon").style.backgroundImage = "url(/img/colored/" + skillData[variableValue].icon + ")"
             }
         }
         if(i === 1){
             document.getElementById("SkillName" + i).innerText = "B: " + skillData[variableValue].name.en
             if(i === RightNumber){
-                document.getElementById("SkillIcon").style.backgroundImage = "url(img/colored/" + skillData[variableValue].icon + ")"
+                document.getElementById("SkillIcon").style.backgroundImage = "url(/img/colored/" + skillData[variableValue].icon + ")"
             }
         }
         if(i === 2){
             document.getElementById("SkillName" + i).innerText = "C: " + skillData[variableValue].name.en
             if(i === RightNumber){
-                document.getElementById("SkillIcon").style.backgroundImage = "url(img/colored/" + skillData[variableValue].icon + ")"
+                document.getElementById("SkillIcon").style.backgroundImage = "url(/img/colored/" + skillData[variableValue].icon + ")"
             }
         }
         if(i === 3){
             document.getElementById("SkillName" + i).innerText = "D: " + skillData[variableValue].name.en
             if(i === RightNumber){
-                document.getElementById("SkillIcon").style.backgroundImage = "url(img/colored/" + skillData[variableValue].icon + ")"
+                document.getElementById("SkillIcon").style.backgroundImage = "url(/img/colored/" + skillData[variableValue].icon + ")"
             }
         }
         console.log(variableName + ": " + variableValue);
