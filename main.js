@@ -155,7 +155,8 @@ async function startTimer(){
                 break; 
             }
             if(o < 1){
-                document.getElementById("correctResults").innerText = missedResults;
+                missedResults++;
+                document.getElementById("missedResults").innerText = missedResults;
                 isAllowed = false;
                 console.log("end")
                 isTimerAllowed = false;
