@@ -9,14 +9,31 @@
 
 </head>
 <body>
-
-    <div id="SkillIcon" class="wnd"></div>
-    <div class="answer-field">
-        <div id="SkillName0" class="wnd answer" onclick="Answer('0')"></div>
-        <div id="SkillName1" class="wnd answer" onclick="Answer('1')"></div>
-        <div id="SkillName2" class="wnd answer" onclick="Answer('2')"></div>
-        <div id="SkillName3" class="wnd answer" onclick="Answer('3')"></div>
+    <div id="gameWindow">
+        <div id="statWindow" class="wnd">
+            <div id="resultBox">Right :
+                <span id="correctResults">0</span>
+            </div>
+            <div id="resultBox2">False :
+                <span id="falseResults">0</span>
+            </div>
+            
+        </div>
+        <div id="SkillIcon" class="wnd"></div>
+        <div id="bottomField">
+            <div id="timerBox">
+                <div id="Timer"></div>
+            </div>
+            <div id="answer-field">
+                <div id="SkillName0" class="wnd answer" onclick="Answer('0')"></div>
+                <div id="SkillName1" class="wnd answer" onclick="Answer('1')"></div>
+                <div id="SkillName2" class="wnd answer" onclick="Answer('2')"></div>
+                <div id="SkillName3" class="wnd answer" onclick="Answer('3')"></div>
+            </div>
+        </div>
+        
     </div>
+    
 
 
 </body>

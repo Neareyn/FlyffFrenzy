@@ -1,6 +1,11 @@
 let randomNumberArray = [];
 let amount = "owo"
 let RightNumber = "owo"
+let phase = 1;
+let timerAmount = 510;
+let isAllowed = true;
+let isTimerAllowed = true;
+
 function generateNumbers(amount){
     for (let i = 1; i <= amount; i++) {
         let variableName = "randomNumber" + (i - 1);
@@ -45,20 +50,119 @@ function getRandomNumber(amount){
 }
 
 getTriviaSkill()
-function getTriviaSkill(){
+async function getTriviaSkill(){
+    randomNumberArray = [];
     amount = 4;
     getRandomNumber(amount);
     generateNumbers(amount);
+    document.getElementById("Timer").style.backgroundColor = "green"
+    startTimer();
 }
 
-function Answer(val){
-    if(val != RightNumber){
-        document.getElementById("SkillName" + val).style.backgroundColor = "#230000";
-        console.log("Wrong")
+
+
+
+
+let correctResults = 0;
+let falseResults = 0;
+
+function Answer(guess){
+    if(isAllowed){
+        if(guess != RightNumber){
+            isTimerAllowed = false;
+            isAllowed = false;
+            document.getElementById("SkillName" + guess).style.backgroundColor = "#230000";
+            document.getElementById("SkillName" + RightNumber).style.backgroundColor = "#002300";
+            falseResults++;
+            document.getElementById("falseResults").innerText = falseResults;
+            console.log("Wrong")
+            restartGame()
+        }
+        else if(guess == RightNumber){
+            isTimerAllowed = false;
+            isAllowed = false;
+            document.getElementById("SkillName" + guess).style.backgroundColor = "#002300";
+            correctResults++;
+            document.getElementById("correctResults").innerText = correctResults;
+            console.log("Correct")
+            restartGame()
+        }
     }
-    else if(val == RightNumber){
-        document.getElementById("SkillName" + val).style.backgroundColor = "#002300";
-        console.log("Correct")
-    }
+    
+}
+
+function delay(milliseconds){
+    return new Promise(resolve => {
+        setTimeout(resolve, milliseconds);
+    });
+}
+
+async function restartGame(){
+    console.log("Game Done");
+    await delay(1000);
+    console.log("Restarting in:");
+    await delay(1000);
+    console.log("3...");
+    await delay(1000);
+    console.log("2...");
+    await delay(1000);
+    console.log("1...");
+    await delay(1000);
+    document.getElementById("SkillName" + 0).style.backgroundColor = "";
+    document.getElementById("SkillName" + 1).style.backgroundColor = "";
+    document.getElementById("SkillName" + 2).style.backgroundColor = "";
+    document.getElementById("SkillName" + 3).style.backgroundColor = "";
+    
+    timerAmount = 510;
+    isTimerAllowed = true;
+    isAllowed = true;
+    getTriviaSkill()
+}
+
+async function startTimer(){
+
+    console.log("owo")
+
+    
+    for(let i = 0; i < 256; i++){
+        if(!isTimerAllowed){
+            break; 
+        }
+        document.getElementById("Timer").style.backgroundColor = "rgb(" + i + ", " + 255 + ", 0)"
+        timerAmount--
+        document.getElementById("Timer").style.width = 100/510*timerAmount + "%";
+        console.log(1)
+        console.log(isTimerAllowed)
+        if(!isTimerAllowed){
+            break; 
+        }
+        await delay(2);
+        
+
+    } 
+    if(i = 255)
+        for(let o = 255; o > -1; o--){
+            if(!isTimerAllowed){
+                break; 
+            }
+            document.getElementById("Timer").style.backgroundColor = "rgb(" + 255 + ", " + o + ", 0)"
+            timerAmount--
+            document.getElementById("Timer").style.width = 100/510*timerAmount + "%";
+            console.log(2)
+            console.log(isTimerAllowed)
+            if(!isTimerAllowed){
+                break; 
+            }
+            if(o < 1){
+                isAllowed = false;
+                console.log("end")
+                isTimerAllowed = false;
+                restartGame()
+            }
+            await delay(2); 
+                
+    } 
+    
+    
 }
 
