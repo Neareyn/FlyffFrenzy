@@ -168,6 +168,7 @@ async function startTimer(){
                 break; 
             }
             if(timerAmount <= 0){
+                document.getElementById("SkillName" + RightNumber).style.backgroundColor = "#002300";
                 missedResults++;
                 document.getElementById("missedResults").innerText = missedResults;
                 isAllowed = false;
