@@ -70,6 +70,20 @@ body{
     width: 100%;
 }
 
+#timerBox2{
+    border: 1px solid #514434;
+    background-color: #232323;
+    box-sizing: border-box;
+    width: 50%;
+    margin-bottom: 15px;
+    height: 20px;
+}
+
+#Timer2{
+    height: 100%;
+    width: 100%;
+}
+
 #bottomField{
     max-width: 720px;
     display: flex;
