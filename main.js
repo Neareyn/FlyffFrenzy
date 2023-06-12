@@ -24,29 +24,24 @@ function generateNumbers(amount){
             document.getElementById("SkillName" + i).innerText = "A: " + skillData[variableValue].name.en
             if(i === RightNumber){
                 document.getElementById("SkillIcon").style.backgroundImage = "url(./img/colored/" + skillData[variableValue].icon + ")"
-                document.getElementById("ID").innerText = "ID: " + variableValue
-
             }
         }
         if(i === 1){
             document.getElementById("SkillName" + i).innerText = "B: " + skillData[variableValue].name.en
             if(i === RightNumber){
                 document.getElementById("SkillIcon").style.backgroundImage = "url(./img/colored/" + skillData[variableValue].icon + ")"
-                document.getElementById("ID").innerText = "ID: " + variableValue
             }
         }
         if(i === 2){
             document.getElementById("SkillName" + i).innerText = "C: " + skillData[variableValue].name.en
             if(i === RightNumber){
                 document.getElementById("SkillIcon").style.backgroundImage = "url(./img/colored/" + skillData[variableValue].icon + ")"
-                document.getElementById("ID").innerText = "ID: " + variableValue
             }
         }
         if(i === 3){
             document.getElementById("SkillName" + i).innerText = "D: " + skillData[variableValue].name.en
             if(i === RightNumber){
                 document.getElementById("SkillIcon").style.backgroundImage = "url(./img/colored/" + skillData[variableValue].icon + ")"
-                document.getElementById("ID").innerText = "ID: " + variableValue
             }
         }
         console.log(variableName + ": " + variableValue);
